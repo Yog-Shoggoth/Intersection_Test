@@ -10,11 +10,11 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_left"):
 		self.global_rotate(self.global_transform.basis.y, 2.5 * delta)
 	if Input.is_action_pressed("ui_right"):
-		self.global_rotate(self.global_transform.basis.y, -2.50 * delta)
+		self.global_rotate(self.global_transform.basis.y, -2.5 * delta)
 	if Input.is_action_pressed("ui_up"):
-		self.global_rotate(self.global_transform.basis.x, 2.5 * delta)
+		self.global_rotate(self.global_transform.basis.x, -2.5 * delta)
 	if Input.is_action_pressed("ui_down"):
-		self.global_rotate(self.global_transform.basis.x, -2.50 * delta)
+		self.global_rotate(self.global_transform.basis.x, 2.5 * delta)
 	
 	is_intersecting(self.global_transform.origin, self.global_transform.basis.z * 800)
 
